@@ -1,0 +1,19 @@
+Using the skills learned in the angular tutorial
+Create a website with 2 pages using angular
+The website should have a Recipes page and and About page
+
+The About page
+1. Fill  it with any content you like
+
+The Recipes Page
+a recipe consists of a Name, Description and Image
+1. On the left side of the page it should display a list of available receipes.
+2. It should have a new button allowing you to add new receipes.
+3. When selecting a receipe it should display that receipes information on the right side of the screen
+4. Below the receipe there should be a drop down allowing you to edit and delete the receipe.
+5. When adding or editing the receipe the following validation should be performed on the name input and description input and image input
+	If the input fields are empty create a read boarder around them and disable the save button.
+	You should only be able to click the save button if all the infomration was succesfully entered.
+
+For more details on how the website should look like and function please visit this url
+https://angularpractice-8704e.web.app/recipe
