@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Portuguese Food",
+        "description": "Delicious beef sandwiches",
+        "imageUrl": "https://www.portugalist.com/wp-content/uploads/prego.jpg"
+    }, 
+    {
+        "id": 2,
+        "name": "South African Food",
+        "description": "Delicious !!!",
+        "imageUrl": "https://kreatiewekosidees.files.wordpress.com/2013/08/shepards-pie.jpg"
+    }
+]

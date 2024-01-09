@@ -1,0 +1,39 @@
+aside {
+    padding: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.recipe-infor__container {
+    width: 60%;
+}
+
+.recipe-image {
+    width: 30%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
