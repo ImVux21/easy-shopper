@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../service/recipe.service';
 import { Recipe } from '../model/recipe';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DetailRecipeComponent } from '../detail-recipe/detail-recipe.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'list-recipe',
@@ -12,14 +13,14 @@ import { DetailRecipeComponent } from '../detail-recipe/detail-recipe.component'
   templateUrl: './list-recipe.component.html',
   styleUrl: './list-recipe.component.css'
 })
-export class ListRecipeComponent {
+export class ListRecipeComponent implements OnInit {
   recipes: Recipe[] = [];
 
-  constructor(private recipeService: RecipeService) { 
-    this.recipeService.getRecipes().subscribe((data: any) => {
-      this.recipes = data;
-    });
+  constructor(private recipeService: RecipeService, private router: Router) { 
+    
+    
   }
-
-  
+  ngOnInit() {
+    this.recipes = this.recipeService.getRecipes();
+  }
 }

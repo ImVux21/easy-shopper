@@ -1,0 +1,15 @@
+.content {
+    /* display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 20px;
+    min-height: 100vh; */
+}
+
+.h1 {    
+    margin: 15px;
+}
+
+li {
+    padding: 20px 0;
+}

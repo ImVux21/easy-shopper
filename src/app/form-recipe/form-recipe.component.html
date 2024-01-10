@@ -1,0 +1,24 @@
+<main class="row">
+    <div class="button-group">
+        <button type="button" class="btn btn-success" (click)="submitForm()" [disabled]="recipeForm.invalid">Save</button>
+        <button type="button" class="btn btn-danger" [routerLink]="['']">Cancel</button>
+    </div>
+    
+    <form class="col-xs-12" [formGroup]="recipeForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Recipe Name" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="image-url" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="image-url" placeholder="" formControlName="imageUrl">
+        </div>
+        <div class="mb-3">
+            <img class="img-fluid" [src]="recipeForm.get('imageUrl')?.value" alt="recipe image">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" rows="3" placeholder="Description" formControlName="description"></textarea>
+        </div>
+    </form>
+</main>

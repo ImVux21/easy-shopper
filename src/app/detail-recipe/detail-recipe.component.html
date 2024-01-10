@@ -1,1 +1,17 @@
-<p>detail-recipe works!</p>
+<div class="card">
+    <img [srcset]="recipe?.imageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h2 class="card-title">{{recipe?.name}}</h2>
+        <p class="card-text">{{recipe?.description}}.</p>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Manage Recipe
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="['/recipe', 'edit', recipe?.id]">Edit Recipe</a></li>
+            <li><a class="dropdown-item" (click)="deleteRecipe(recipe!.id)" [routerLink]="['/recipe']">Delete Recipe</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,25 +1,29 @@
-<aside>
-    <button class="btn btn-success">New Recipe</button>
-
-    <section>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link active" href="" *ngFor="let recipe of recipes" [routerLink]="['/recipe/details', recipe.id]">
-                    <article class="card mb-3">
-                        <div class="row g-0 justify-content-between">
-                            <div class="recipe-infor__container col-md-8">
-                                <h1 class="card-title">{{recipe.name}}</h1>
-                                <p class="card-text">{{recipe.description}}</p>
+<div class="content row">
+    <aside class="col-md-3 list-recipe">
+        <button class="btn btn-success" [routerLink]="['new']">New Recipe</button>
+    
+        <section>
+            <ul class="nav flex-column">
+                <li class="nav-item" *ngFor="let recipe of recipes">
+                    <a class="nav-link active" href="" [routerLink]="['/recipe/details', recipe.id]">
+                        <article class="card mb-3">
+                            <div class="row g-0 justify-content-between">
+                                <div class="recipe-infor__container col-md-8" [routerLinkActive]="['active-link']">
+                                    <h1 class="card-title">{{recipe.name}}</h1>
+                                    <p class="card-text">{{recipe.description}}</p>
+                                </div>
+                                <div class="recipe-image col-md-4">
+                                    <img [src]="recipe.imageUrl" alt="" class="img-fluid">
+                                </div>
                             </div>
-                            <div class="recipe-image col-md-4">
-                                <img [src]="recipe.imageUrl" alt="" class="img-fluid rounded">
-                            </div>
-                        </div>
-                    </article>
-                </a>
-            </li>
-        </ul>
-    </section>
-</aside>
-
-<router-outlet></router-outlet>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+    
+    <aside class="col-md-3 detail-container">
+        <router-outlet></router-outlet>
+    </aside>
+</div>

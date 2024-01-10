@@ -1,0 +1,16 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: none;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.card-title {
+    font-size: 36px;
+}
