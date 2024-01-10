@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
 }
 
 aside {
@@ -36,7 +35,8 @@ aside {
 }
 
 .col-md-3 {
-    height: fit-content;
+    /* height: fit-content; */
+
 }
 
 .active-link {
@@ -44,4 +44,10 @@ aside {
     color: #fff;
     background-color: #337ab7;
     border-color: #337ab7;
+}
+
+aside:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
